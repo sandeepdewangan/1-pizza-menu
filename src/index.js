@@ -73,9 +73,9 @@ function Menu() {
 
 function Order() {
   return (
-    <div>
+    <React.Fragment>
       <button>Order Now!</button>
-    </div>
+    </React.Fragment>
   );
 }
 
