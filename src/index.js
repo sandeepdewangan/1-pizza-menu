@@ -5,21 +5,21 @@ const pizzaData = [
     name: "Veggie Delight",
     ingredients: "Onion, Olives with a little bit of cheese",
     price: 300,
-    photoName: "images/vegitable.jpg",
+    photoName: "vegitable.jpg",
     soldOut: false,
   },
   {
     name: "Cheese Delight",
     ingredients: "Onion, Olives with a quite a bit of cheese",
     price: 500,
-    photoName: "images/cheese.jpg",
+    photoName: "cheese.jpg",
     soldOut: false,
   },
   {
     name: "Farm House",
     ingredients: "Combination of both",
     price: 600,
-    photoName: "images/farmhouse.jpg",
+    photoName: "farmhouse.jpg",
     soldOut: false,
   },
 ];
@@ -28,7 +28,7 @@ function Pizza({ pizzaObj }) {
   return (
     <div>
       <img
-        src={pizzaObj.photoName}
+        src={`images/${pizzaObj.photoName}`}
         alt={pizzaObj.name}
         style={{ height: "100px" }}
       />
