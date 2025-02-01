@@ -48,14 +48,12 @@ function Header() {
 }
 
 function Footer() {
-  const hours = new Date().getHours;
-  const isOpen = hours >= 10 && hours <= 5;
-  console.log(isOpen);
+  const hours = new Date().getHours();
+  console.log(hours);
+  const isOpen = hours >= 10 && hours <= 10;
 
   return (
-    <div>
-      <p>We are open! {new Date().toLocaleDateString()}</p>
-    </div>
+    <div>{isOpen && <p>We are open! {new Date().toLocaleDateString()}</p>}</div>
   );
 }
 
