@@ -5,29 +5,36 @@ const pizzaData = [
     name: "Veggie Delight",
     ingredients: "Onion, Olives with a little bit of cheese",
     price: 300,
-    photoName: "vegitable.jpg",
+    photoName: "images/vegitable.jpg",
     soldOut: false,
   },
   {
     name: "Cheese Delight",
     ingredients: "Onion, Olives with a quite a bit of cheese",
     price: 500,
-    photoName: "cheese.jpg",
+    photoName: "images/cheese.jpg",
     soldOut: false,
   },
   {
     name: "Farm House",
     ingredients: "Combination of both",
     price: 600,
-    photoName: "farmhouse.jpg",
+    photoName: "images/farmhouse.jpg",
     soldOut: false,
   },
 ];
 
-function Pizza() {
+function Pizza(props) {
   return (
     <div>
-      <p>Pizza</p>
+      <img
+        src={props.pizzaObj.photoName}
+        alt={props.pizzaObj.name}
+        style={{ height: "100px" }}
+      />
+      <p>{props.pizzaObj.name}</p>
+      <p>{props.pizzaObj.ingredients}</p>
+      <p>{props.pizzaObj.price}</p>
     </div>
   );
 }
@@ -56,7 +63,9 @@ function Menu() {
   return (
     <div>
       <p>Our Menu</p>
-      <Pizza />
+      {pizzaData.map((pizza) => (
+        <Pizza pizzaObj={pizza} />
+      ))}
     </div>
   );
 }
