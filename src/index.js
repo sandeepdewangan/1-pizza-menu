@@ -71,11 +71,20 @@ function Menu() {
   );
 }
 
+function Order() {
+  return (
+    <div>
+      <button>Order Now!</button>
+    </div>
+  );
+}
+
 function App() {
   return (
     <div>
       <Header />
       <Menu />
+      <Order />
       <Footer />
     </div>
   );
