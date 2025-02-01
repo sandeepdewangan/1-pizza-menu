@@ -24,17 +24,17 @@ const pizzaData = [
   },
 ];
 
-function Pizza(props) {
+function Pizza({ pizzaObj }) {
   return (
     <div>
       <img
-        src={props.pizzaObj.photoName}
-        alt={props.pizzaObj.name}
+        src={pizzaObj.photoName}
+        alt={pizzaObj.name}
         style={{ height: "100px" }}
       />
-      <p>{props.pizzaObj.name}</p>
-      <p>{props.pizzaObj.ingredients}</p>
-      <p>{props.pizzaObj.price}</p>
+      <p>{pizzaObj.name}</p>
+      <p>{pizzaObj.ingredients}</p>
+      <p>{pizzaObj.price}</p>
     </div>
   );
 }
