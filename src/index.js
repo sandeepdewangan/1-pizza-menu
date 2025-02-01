@@ -58,12 +58,15 @@ function Footer() {
 }
 
 function Menu() {
+  const numPizzas = pizzaData.length;
   return (
     <div>
       <p>Our Menu</p>
-      {pizzaData.map((pizza) => (
-        <Pizza pizzaObj={pizza} />
-      ))}
+      {numPizzas > 0 ? (
+        pizzaData.map((pizza) => <Pizza pizzaObj={pizza} key={pizza.name} />)
+      ) : (
+        <p>No pizza available!</p>
+      )}
     </div>
   );
 }
